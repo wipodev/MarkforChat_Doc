@@ -71,16 +71,18 @@ main h2 {
   font-weight: 300;
 }
 
-form {
+.form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto repeat(5, 1fr);
+  grid-template-rows: auto auto repeat(4, 1fr) auto;
   gap: 5px;
   justify-content: center;
 }
 
 select {
-  grid-column: 3;
+  grid-column: 2/4;
+  font-weight: 600;
+  border: none;
 }
 
 .display {
@@ -103,9 +105,17 @@ button {
   margin-top: 10px;
 }
 
+.cero {
+  grid-column: 2;
+}
+
 .delete {
   padding: 10px;
   color: var(--bg-color-deeper);
+}
+
+.active {
+  color: var(--text-color);
 }
 
 .whatsapp {
@@ -113,6 +123,12 @@ button {
   background-color: var(--primary-color);
   border-radius: 50%;
   color: var(--icon-color);
+  width: 80px;
+  height: 80px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 661px) {
