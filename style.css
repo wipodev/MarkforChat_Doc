@@ -13,6 +13,7 @@
   --text-color: #3b4a54;
   --text-color-title: #41525d;
   --white-color: #fff;
+  --icon-color: var(--white-color);
   --font-family: Segoe UI,
     Helvetica Neue,
     Helvetica,
@@ -60,7 +61,7 @@ main {
   width: 100%;
   min-height: calc(100vh - 94px);
   background: var(--white-color);
-  max-width: 1000px;
+  max-width: 660px;
   padding: 36px;
 }
 
@@ -68,6 +69,50 @@ main h2 {
   font-size: 28px;
   color: var(--text-color-title);
   font-weight: 300;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto repeat(5, 1fr);
+  gap: 5px;
+  justify-content: center;
+}
+
+select {
+  grid-column: 3;
+}
+
+.display {
+  grid-column: 1/4;
+  height: 80px;
+  padding: 10px;
+  font-size: 48px;
+  text-align: center;
+  border: none;
+  margin-top: 20px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  justify-self: center;
+  margin-top: 10px;
+}
+
+.delete {
+  padding: 10px;
+  color: var(--bg-color-deeper);
+}
+
+.whatsapp {
+  grid-column: 2;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  color: var(--icon-color);
 }
 
 @media screen and (min-width: 661px) {
