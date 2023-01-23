@@ -1,14 +1,5 @@
 const CACHE_NAME = "cache_markforchat",
-  urlsToCache = [
-    "./",
-    "./index.html",
-    "./style.css",
-    "./main.js",
-    "./countries.js",
-    "./img/icon.svg",
-    "./img/icon.png",
-    "./img/icon.ico",
-  ];
+  urlsToCache = ["./", "./index.html", "./css/style.css", "./js/main.js", "./js/countries.js", "./img/favicon.ico"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(

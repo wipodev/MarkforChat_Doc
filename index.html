@@ -5,16 +5,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Mark for Chat te permite comenzar un chat con alguien sin necesidad de tener su número de teléfono guardado en la libreta de contactos de tu teléfono.">
   <meta name="theme-color" content="#00a884">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="./img/icon.ico">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./img/icons/icon_192.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <title>Mark for Chat</title>
 </head>
 
 <body>
-  <section class="hero">
-  </section>
+  <section class="hero"></section>
   <article>
     <header>
       <svg width="39" height="39" viewBox="0 0 39 39">
@@ -26,9 +28,9 @@
       <h1>MARK FOR CHAT</h1>
     </header>
     <main>
+      <select id="country-list">
+      </select>
       <section class="form">
-        <select id="country-list">
-        </select>
         <label id="pantalla" class="display"></label>
         <button onclick="pintarNumero(1)">1</button>
         <button onclick="pintarNumero(2)">2</button>
@@ -39,14 +41,20 @@
         <button onclick="pintarNumero(7)">7</button>
         <button onclick="pintarNumero(8)">8</button>
         <button onclick="pintarNumero(9)">9</button>
-        <button onclick="pintarNumero(0)" class="cero">0</button>
-        <button class="delete" onclick="deleteNumber()">
+        <button class="deleteAll" aria-label="delete all" onclick="deleteAll()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+              d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
+          </svg>
+        </button>
+        <button onclick="pintarNumero(0)">0</button>
+        <button class="delete" aria-label="delete number" onclick="deleteNumber()">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
             <path fill="currentColor"
               d="M576 128c0-35.3-28.7-64-64-64H205.3c-17 0-33.3 6.7-45.3 18.7L9.4 233.4c-6 6-9.4 14.1-9.4 22.6s3.4 16.6 9.4 22.6L160 429.3c12 12 28.3 18.7 45.3 18.7H512c35.3 0 64-28.7 64-64V128zM271 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
           </svg>
         </button>
-        <button onclick="openWhatsApp()" class="whatsapp">
+        <button id="whatsapp" aria-label="mark" onclick="openWhatsApp()">
           <svg viewBox="0 0 24 24" height="48" width="48" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px"
             y="0px" enable-background="new 0 0 24 24" xml:space="preserve">
             <path fill="currentColor" enable-background="new    "
@@ -57,8 +65,8 @@
       </section>
     </main>
   </article>
-  <script src="countries.js"></script>
-  <script src="main.js"></script>
+  <script src="./js/countries.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
