@@ -58,13 +58,13 @@
     align-items: center;
   }
 
+  .active {
+    color: var(--text-color);
+  }
+
   @media screen and (min-width: 661px) {
     button:hover {
       color: var(--text-color-title);
     }
-  }
-
-  .active {
-    color: var(--text-color);
   }
 </style>

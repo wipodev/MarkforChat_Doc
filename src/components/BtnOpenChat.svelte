@@ -1,19 +1,18 @@
 <script>
   import { Display, Country } from "../store/Phones";
-  import { mobile } from "../store/MobileDetect";
+  import { mobile } from "../store/Utils";
 
   const openChat = () => {
     if (!$Display) {
       alert("debe ingresar numero");
       return false;
     }
-    console.log($Country, $Display);
 
-    /*  if (mobile()) {
+    if (mobile()) {
       window.open(`https://wa.me/+${$Country}${$Display}`);
     } else {
       window.open(`https://web.whatsapp.com/send/?phone=%2B${$Country}${$Display}&text&type=phone_number&app_absent=0`);
-    } */
+    }
   };
 </script>
 

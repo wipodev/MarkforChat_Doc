@@ -1,10 +1,10 @@
 <script>
   import { onMount } from "svelte";
-  import { Display, isActive, ClipBoardActive } from "../store/Phones";
+  import { Display, isActive } from "../store/Phones";
+  import { clipBoard } from "../store/Utils";
   import BtnBackSpace from "./BtnBackSpace.svelte";
   import BtnNumber from "./BtnNumber.svelte";
   import BtnOpenChat from "./BtnOpenChat.svelte";
-  import { mobile } from "../store/MobileDetect";
   import BtnPaste from "./BtnPaste.svelte";
 
   onMount(() => {
@@ -15,44 +15,14 @@
         isActive.setActive(true);
       }
     });
-    const input = document.querySelector("#display");
-    if (mobile()) {
-      //input.setAttribute("readonly", true);
-    }
-    window.addEventListener("focus", () => {
-      navigator.clipboard
-        .readText()
-        .then((text) => {
-          if (!isNaN(text)) {
-            ClipBoardActive.setActive(true);
-          } else {
-            ClipBoardActive.setActive(false);
-          }
-        })
-        .catch((err) => console.log("No hay texto en el clipboard:", err));
-    });
-  });
 
-  const updateDisplay = (event) => {
-    let value = event.target.value;
-    if (!value) {
-      Display.deleteDisplay();
-      isActive.setActive(false);
-    } else {
-      Display.setDisplay(value);
-      isActive.setActive(true);
-    }
-  };
+    clipBoard();
+    window.addEventListener("focus", clipBoard);
+  });
 </script>
 
 <section class="form">
-  <input
-    type="tel"
-    id="display"
-    value={$Display}
-    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-    on:change={updateDisplay}
-  />
+  <input type="tel" id="display" value={$Display} readonly />
   <BtnNumber />
   <BtnNumber num="2" />
   <BtnNumber num="3" />
