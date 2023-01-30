@@ -1,3 +1,5 @@
+import { ClipBoardActive } from "./Phones";
+
 export const mobile = () => {
   if (
     navigator.userAgent.match(/Android/i) ||
@@ -11,5 +13,19 @@ export const mobile = () => {
     return true;
   } else {
     return false;
+  }
+};
+
+export const clipBoard = async () => {
+  try {
+    const clip = await navigator.clipboard.readText();
+    if (clip.match(/^[0-9]+$/)) {
+      ClipBoardActive.setActive(true);
+      return clip;
+    } else {
+      ClipBoardActive.setActive(false);
+    }
+  } catch (err) {
+    console.log("No hay texto en el clipboard:", err);
   }
 };
