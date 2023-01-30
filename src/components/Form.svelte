@@ -17,7 +17,7 @@
     });
     const input = document.querySelector("#display");
     if (mobile()) {
-      input.setAttribute("readonly", true);
+      //input.setAttribute("readonly", true);
     }
     window.addEventListener("focus", () => {
       navigator.clipboard

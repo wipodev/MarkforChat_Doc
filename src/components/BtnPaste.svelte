@@ -29,6 +29,7 @@
   button {
     padding: 10px;
     color: var(--bg-color-deeper);
+    display: none;
   }
 
   .active {
