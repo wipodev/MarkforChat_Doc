@@ -1,6 +1,13 @@
 <script>
   import Hero from "../components/Hero.svelte";
   import Header from "../components/Header.svelte";
+  import { onMount } from "svelte";
+  import { mobile } from "../store/Utils";
+
+  onMount(() => {
+    mobile.setMobile();
+    window.addEventListener("resize", () => mobile.setMobile());
+  });
 </script>
 
 <Hero />

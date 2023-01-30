@@ -1,10 +1,6 @@
 <script>
   import { Display, isActive, ClipBoardActive } from "../store/Phones";
   import { mobile, clipBoard } from "../store/Utils";
-  import { onMount } from "svelte";
-
-  let disable = true;
-  const visible = () => (disable = mobile());
 
   const pasteDisplay = async () => {
     let clip = await clipBoard();
@@ -13,14 +9,9 @@
       isActive.setActive(true);
     }
   };
-
-  onMount(() => {
-    visible();
-    window.addEventListener("resize", () => visible());
-  });
 </script>
 
-<button aria-label="paste" class:active={$ClipBoardActive} class:disable on:click={pasteDisplay}>
+<button aria-label="paste" class:active={$ClipBoardActive} class:disable={$mobile} on:click={pasteDisplay}>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
     <path
       fill="currentColor"
