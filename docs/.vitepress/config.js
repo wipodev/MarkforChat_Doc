@@ -16,7 +16,6 @@ export default {
         nav: [
           { text: "Inicio", link: "/" },
           { text: "APP Web", link: "/appweb/" },
-          { text: "Equipo", link: "/team/" },
         ],
         footer: {
           message: "Descargo de responsabilidad: esta aplicación no está afiliada a WhatsApp Inc.",
@@ -32,7 +31,6 @@ export default {
         nav: [
           { text: "Home", link: "/en/" },
           { text: "APP Web", link: "/en/appweb/" },
-          { text: "Team", link: "/en/team/" },
         ],
         footer: {
           message: "Disclaimer: This app is not affiliated with WhatsApp Inc.",
