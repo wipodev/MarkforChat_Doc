@@ -15,18 +15,21 @@ const state = reactive({
   position: 0,
   interval: null,
   active: false,
+  long: 0,
 });
 
 const startPress = () => {
   if (!state.interval) {
     state.interval = setInterval(function () {
       deleteDisplay(true);
+      console.log("borrar");
     }, 800);
   }
 };
 
 const stopPress = () => {
   clearInterval(state.interval);
+  console.log("terminar");
   state.interval = null;
 };
 
@@ -46,6 +49,7 @@ const addDisplay = (text) => {
   const { display, position } = state;
   state.display = display.slice(0, position) + text + display.slice(position);
   state.position += 1;
+  state.long = state.display.length;
   state.active = true;
 };
 
@@ -55,7 +59,20 @@ const deleteDisplay = (long = false) => {
   if (position > 0) {
     state.display = removeRange(display, positionInit, position);
     state.position = positionInit;
+    state.long = state.display.length;
     if (!state.display) state.active = false;
+  }
+};
+
+const displayListener = () => {
+  state.display = state.display.replace(/[^0-9]/g, "");
+  let newLong = state.display.length - state.long;
+  state.position += newLong;
+
+  if (!state.display) {
+    state.active = false;
+  } else {
+    state.active = true;
   }
 };
 
@@ -104,6 +121,7 @@ const sendChat = () => {
       @click="currentCursor"
       @keydown="captureKeyup"
       @keyup="captureKeydown"
+      @input="displayListener"
     />
     <BtnNumber v-for="num in 9" :key="num" :text="num" @click="addDisplay(num)" />
     <BtnNumber text="0" @click="addDisplay(0)" />
