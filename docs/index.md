@@ -3,29 +3,29 @@ layout: home
 
 hero:
   name: Mark for Chat
-  text: ¡Comienza a chatear hoy mismo!
-  tagline: Descarga Mark for Chat ahora y experimenta la libertad de poder hablar con cualquier persona en WhatsApp sin necesidad de añadirlos a tu libreta de contactos.
+  text: ¡Start chatting today!
+  tagline: Download Mark for Chat now and experience the freedom of being able to talk to anyone on WhatsApp without having to add them to your contact book.
   image:
     src: /app.png
     alt: MarkforChat
   actions:
     - theme: brand
-      text: Descarga la APP
+      text: Download the APP
       link: https://github.com/vuejs/vitepress
 
 features:
   - icon: 📜
-    title: Seleccione el país
-    details: Utilice la lista desplegable en la parte superior de la pantalla para seleccionar el código de país deseado.
+    title: Select country
+    details: Use the dropdown list at the top of the screen to select the desired country code.
   - icon:
       ☎️
       #src: /cool-feature-icon.svg
-    title: Marque el número
-    details: Utilice el teclado numérico para marcar el número de teléfono al que desea llamar.
+    title: Dial the number
+    details: Use the numeric keypad to dial the phone number you want to call.
   - icon:
       📞
       #dark: /dark-feature-icon.svg
       #light: /light-feature-icon.svg
-    title: Iniciar conversación en WhatsApp
-    details: Presione el botón Chatear en la parte inferior del teclado numérico y listo.
+    title: Start conversation on WhatsApp
+    details: Hit the Chat button at the bottom of the number pad and you're done.
 ---
