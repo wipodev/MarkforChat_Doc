@@ -1,0 +1,20 @@
+:root {
+  --primary-color: #00a884;
+  --logo-color: #00E676;
+  --white-color: #fff;
+  --black-color: #1e1e20;
+  --bg-color: #eae6df;
+  --bg-color-deeper: #d1d7db;
+  --btn-hover-color: #41525d;
+  --vp-c-brand: var(--primary-color);
+  --vp-home-hero-name-color: var(--primary-color);
+  --vp-c-bg: var(--bg-color);
+}
+
+.dark {
+  --vp-c-bg: var(--black-color);
+}
+
+.VPTeamPageTitle {
+  color: var(--primary-color)
+}
