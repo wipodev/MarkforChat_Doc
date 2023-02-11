@@ -1,0 +1,38 @@
+<script>
+  import { Display, Country } from "../store/Phones";
+  import { mobile } from "../store/Utils";
+
+  const openChat = () => {
+    if (!$Display) {
+      alert("debe ingresar numero");
+      return false;
+    }
+
+    if ($mobile) {
+      window.open(`https://wa.me/+${$Country}${$Display}`);
+    } else {
+      window.open(`https://web.whatsapp.com/send/?phone=%2B${$Country}${$Display}&text&type=phone_number&app_absent=0`);
+    }
+  };
+</script>
+
+<button aria-label="mark" on:click={openChat}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path
+      fill="currentColor"
+      d="M19.005,3.175H4.674C3.642,3.175,3,3.789,3,4.821V21.02 l3.544-3.514h12.461c1.033,0,2.064-1.06,2.064-2.093V4.821C21.068,3.789,20.037,3.175,19.005,3.175z M14.016,13.044H7.041V11.1 h6.975V13.044z M17.016,9.044H7.041V7.1h9.975V9.044z"
+    />
+  </svg>
+</button>
+
+<style>
+  button {
+    grid-column: 2;
+    background-color: var(--primary-color);
+    color: var(--icon-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+</style>
