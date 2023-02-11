@@ -8,6 +8,7 @@ onUpdated(() => {
   const posi = state.position;
   inputDisplay.value.focus();
   inputDisplay.value.setSelectionRange(posi, posi);
+  if (posi === 0) stopPress();
 });
 
 const state = reactive({
@@ -22,14 +23,12 @@ const startPress = () => {
   if (!state.interval) {
     state.interval = setInterval(function () {
       deleteDisplay(true);
-      console.log("borrar");
     }, 800);
   }
 };
 
 const stopPress = () => {
   clearInterval(state.interval);
-  console.log("terminar");
   state.interval = null;
 };
 
