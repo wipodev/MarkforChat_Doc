@@ -1,8 +1,7 @@
 {
   "name": "markforchat_doc",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "aplicación minimalista que te permite comunicarte con personas en WhatsApp sin necesidad de tener su número de teléfono guardado en tu libreta de contactos",
-  "main": "index.js",
   "authors": {
     "name": "wipodev",
     "email": "ajwipo@gmail.com"
