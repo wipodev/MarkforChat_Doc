@@ -1,41 +1,34 @@
 ---
 layout: page
+title: Mark for Chat Web
 ---
 
 <script setup>
-import {
-  VPTeamPage,
-  VPTeamPageTitle
-} from 'vitepress/theme'
 import Spinner from '../components/Spinner.vue'
 import Form from '../components/Form.vue'
+import {onMounted} from 'vue'
 
+onMounted(()=>{
+  document.querySelector(".VPNav").classList.add("appNav")
+})
 </script>
 
-<VPTeamPage>
-  <VPTeamPageTitle>
-    <template #title >
-      Mark for Chat Web
-    </template>
-  </VPTeamPageTitle>
-  <main>
-    <Spinner/>
-    <Form/>
-  </main>
-</VPTeamPage>
+<div class="appHeader"/>
+<main>
+  <Spinner/>
+  <Form/>
+</main>
 
 <style scoped>
-  .VPTeamPage{
-    padding: 0;
-  }
-
-  .VPTeamPageTitle{
-    padding: 0;
-  }
+  .appHeader{
+  width: 100%;
+  height: 36px;
+  background-color: var(--nav-bg-color)
+}
 
   main {
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 100px);
     background: var(--vp-c-bg-soft);
     max-width: 660px;
     padding: 0 36px;
@@ -43,12 +36,16 @@ import Form from '../components/Form.vue'
   }
 
   @media screen and (min-width: 661px) {
+    .appHeader{
+      position: relative;
+      height: 158px;
+    }
 
     main {
+      position: relative;
       border-radius: 3px;
-      box-shadow: 0 17px 50px 0 rgb(11 20 26 / 19%), 0 12px 15px 0 rgb(11 20 26 / 24%);
-      margin: 0 auto;
-      padding: 64 60 60;
+      box-shadow: var(--shadow-color);
+      margin: -122px auto 0 auto;
     }
   }
 </style>
