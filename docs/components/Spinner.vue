@@ -29,4 +29,8 @@ select {
   min-height: 24px;
   cursor: pointer;
 }
+
+select:focus {
+  color: var(--black-color);
+}
 </style>

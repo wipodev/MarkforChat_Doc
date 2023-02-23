@@ -51,7 +51,6 @@ button:focus-visible {
 
 .back {
   padding: 10px;
-  color: var(--bg-color-deeper);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +58,7 @@ button:focus-visible {
 
 .send {
   grid-column: 2;
-  background-color: var(--primary-color);
+  background-color: var(--app-primary-color);
   color: var(--white-color);
   display: flex;
   justify-content: center;
@@ -79,7 +78,7 @@ button:focus-visible {
     color: var(--btn-hover-color);
   }
   .send:hover {
-    background-color: var(--primary-color);
+    background-color: var(--app-primary-color);
   }
 }
 </style>
