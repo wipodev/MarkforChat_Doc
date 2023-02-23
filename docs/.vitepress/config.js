@@ -5,7 +5,7 @@ export default {
     "aplicación minimalista que te permite comunicarte con personas en WhatsApp sin necesidad de tener su número de teléfono guardado en tu libreta de contactos",
   lastUpdated: true,
   base: "/markforchat/",
-  head: [["link", { rel: "icon", href: "/logo.svg", type: "image/svg" }]],
+  head: [["link", { rel: "icon", href: "/markforchat/logo.svg", type: "image/svg" }]],
   themeConfig: {
     siteTitle: "",
     logo: "/logo-main.svg",
@@ -17,7 +17,7 @@ export default {
       lan: "en",
       themeConfig: {
         nav: [
-          { text: "Home", link: "https://www.wipodev.com" },
+          { text: "Home", link: "https://wipodev.com" },
           { text: "Mark for Chat", link: "/" },
           { text: "APP Web", link: "/appweb/" },
           { text: "Privacy Policy", link: "/privacy/" },
@@ -34,7 +34,7 @@ export default {
       link: "/es/",
       themeConfig: {
         nav: [
-          { text: "Inicio", link: "https://www.wipodev.com/es/" },
+          { text: "Inicio", link: "https://wipodev.com/es/" },
           { text: "Mark for Chat", link: "/es/" },
           { text: "APP Web", link: "/es/appweb/" },
           { text: "Políticas de Privacidad", link: "/es/privacy/" },

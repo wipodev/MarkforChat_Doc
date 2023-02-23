@@ -6,7 +6,7 @@ const NavLinkPatch = (): Plugin => ({
   enforce: "pre",
   transform: (code, id) => {
     if (id.endsWith("VPLink.vue")) {
-      return code.replace(/^const isExternal.*$/m, "const isExternal = false");
+      return code.replace("_blank", "_self");
     }
   },
 });
@@ -16,7 +16,7 @@ const NavLinkTitle = (): Plugin => ({
   enforce: "pre",
   transform: (code, id) => {
     if (id.endsWith("VPNavBarTitle.vue")) {
-      return code.replace(':href="normalizeLink(currentLang.link)"', "href='https://www.wipodev.com'");
+      return code.replace("normalizeLink(currentLang.link)", "normalizeLink('https://wipodev.com' + currentLang.link)");
     }
   },
 });
