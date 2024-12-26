@@ -1,0 +1,44 @@
+:root {
+  --primary-color: #ff7800;
+  --app-primary-color: #00a884;
+  --link-color: #1B0298;
+  --logo-color: #00E676;
+  --white-color: #fff;
+  --black-color: #1e1e20;
+  --black-soft-color: #252529;
+  --bg-color: #eae6df;
+  --bg-color-deeper: #d1d7db;
+  --btn-hover-color: #41525d;
+  --vp-c-brand: var(--app-primary-color);
+  --vp-home-hero-name-color: var(--app-primary-color);
+  --vp-c-bg: var(--bg-color);
+  --nav-bg-color: var(--app-primary-color);
+  --shadow-color: 0 17px 50px 0 rgb(11 20 26 / 19%),
+    0 12px 15px 0 rgb(11 20 26 / 24%);
+}
+
+.dark {
+  --vp-c-bg: var(--black-color);
+  --nav-bg-color: var(--black-soft-color);
+  --shadow-color: 0 17px 50px 0 rgb(11 20 26 / 19%),
+    0 0 15px 15px rgb(11 20 26 / 24%);
+}
+
+.VPTeamPageTitle {
+  color: var(--primary-color);
+  --nav-bg-color: var(--black-soft-color);
+}
+
+.VPImage.logo {
+  height: 44px;
+}
+
+.appNav {
+  --vp-nav-bg-color: var(--nav-bg-color);
+  --vp-c-brand: var(--link-color);
+  background: var(--nav-bg-color);
+}
+
+.dark .appNav {
+  --vp-c-brand: var(--app-primary-color);
+}
