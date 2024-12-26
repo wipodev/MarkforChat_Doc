@@ -1,12 +1,12 @@
 {
-  "name": "markforchat_doc",
-  "version": "2.0.1",
+  "name": "markforchat",
+  "version": "2.0.2",
   "description": "aplicación minimalista que te permite comunicarte con personas en WhatsApp sin necesidad de tener su número de teléfono guardado en tu libreta de contactos",
   "authors": {
     "name": "wipodev",
     "email": "ajwipo@gmail.com"
   },
-  "repository": "/MarkforChat_Doc",
+  "repository": "/markforchat",
   "scripts": {
     "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
@@ -15,8 +15,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "gh-pages": "^5.0.0",
-    "vitepress": "^1.0.0-alpha.45",
-    "vue": "^3.2.47"
+    "gh-pages": "^6.2.0",
+    "vitepress": "^1.5.0"
   }
 }
