@@ -11,7 +11,7 @@
     "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
-    "deploy": "gh-pages -d docs/.vitepress/dist -b main -r https://github.com/wipodev/markforchat.git"
+    "deploy": "gh-pages -d docs/.vitepress/dist"
   },
   "license": "MIT",
   "devDependencies": {

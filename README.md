@@ -6,7 +6,7 @@
 
 </div>
 
-<img width="200" height="auto" align="right" src="docs\public\logo.svg">
+<img width="150" height="auto" align="right" src="docs\public\logo.svg">
 
 Version web de Mark for Chat, desarrollado con [VitePress](https://vitepress.vuejs.org/)
 
